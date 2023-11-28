@@ -1,0 +1,47 @@
+@model IEnumerable<web.Models.Rezervacija>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Rezervacija</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.datumPrevzema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datumZapadlosti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Knjiga)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.datumPrevzema)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datumZapadlosti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Knjiga.Naslov)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RezervacijaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RezervacijaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RezervacijaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
