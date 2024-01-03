@@ -762,3 +762,4 @@ C:\Users\Tim Purnat\Desktop\aljazis\knjiznica\web\obj\Debug\net8.0\refint\web.dl
 C:\Users\Tim Purnat\Desktop\aljazis\knjiznica\web\obj\Debug\net8.0\web.pdb
 C:\Users\Tim Purnat\Desktop\aljazis\knjiznica\web\obj\Debug\net8.0\web.genruntimeconfig.cache
 C:\Users\Tim Purnat\Desktop\aljazis\knjiznica\web\obj\Debug\net8.0\ref\web.dll
+C:\Users\Tim Purnat\Desktop\aljazis\knjiznica\web\obj\Debug\net8.0\web.sourcelink.json
