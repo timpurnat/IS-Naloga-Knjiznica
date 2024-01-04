@@ -8,8 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using web.Data;
 using web.Models;
 using Microsoft.AspNetCore.Authorization;
-
+using Microsoft.EntityFrameworkCore;
+using web.Models;
+using help;
 namespace web.Controllers
+
 {
     public class KnjigaController : Controller
     {
@@ -22,8 +25,12 @@ namespace web.Controllers
 
         // GET: Knjiga
         // GET: Knjiga
-public async Task<IActionResult> Index(string searchString)
+// GET: Knjiga
+public async Task<IActionResult> Index(string searchString, string sortOrder, int? page)
 {
+    // Set the number of items per page
+    int pageSize = 3;
+
     // Retrieve all books from the database without including related entities for now
     var knjige = _context.Knjige.AsQueryable();
 
@@ -33,12 +40,62 @@ public async Task<IActionResult> Index(string searchString)
         knjige = knjige.Where(k => k.Naslov.Contains(searchString));
     }
 
-    // Now include the related entities after filtering
+    // Sorting logic
+    ViewData["CurrentSort"] = sortOrder;
+    ViewData["NaslovSortParm"] = sortOrder == "naslov" ? "naslov_desc" : "naslov";
+    ViewData["AvtorSortParm"] = sortOrder == "avtor" ? "avtor_desc" : "avtor";
+    ViewData["ZvrstSortParm"] = sortOrder == "zvrst" ? "zvrst_desc" : "zvrst";
+    ViewData["KategorijaSortParm"] = sortOrder == "kategorija" ? "kategorija_desc" : "kategorija";
+    ViewData["OcenaSortParm"] = sortOrder == "ocena" ? "ocena_desc" : "ocena";
+
+    switch (sortOrder)
+    {
+        case "naslov":
+            knjige = knjige.OrderBy(k => k.Naslov);
+            break;
+        case "naslov_desc":
+            knjige = knjige.OrderByDescending(k => k.Naslov);
+            break;
+        case "avtor":
+            knjige = knjige.OrderBy(k => k.Avtor.PriimekIme, StringComparer.CurrentCultureIgnoreCase);
+            break;
+        case "avtor_desc":
+            knjige = knjige.OrderByDescending(k => k.Avtor.PriimekIme, StringComparer.CurrentCultureIgnoreCase);
+            break;
+        case "zvrst":
+            knjige = knjige.OrderBy(k => k.Zvrst.ImeZvrsti);
+            break;
+        case "zvrst_desc":
+            knjige = knjige.OrderByDescending(k => k.Zvrst.ImeZvrsti);
+            break;
+        case "kategorija":
+            knjige = knjige.OrderBy(k => k.Kategorija.imeKategorije);
+            break;
+        case "kategorija_desc":
+            knjige = knjige.OrderByDescending(k => k.Kategorija.imeKategorije);
+            break;
+        case "ocena":
+            knjige = knjige.OrderBy(k => k.Ocena);
+            break;
+        case "ocena_desc":
+            knjige = knjige.OrderByDescending(k => k.Ocena);
+            break;
+        default:
+            knjige = knjige.OrderBy(k => k.Naslov);
+            break;
+    }
+
+    // Now include the related entities after filtering and sorting
     knjige = knjige.Include(k => k.Avtor).Include(k => k.Kategorija).Include(k => k.Zvrst);
 
-    // Return the filtered or unfiltered list of books to the view
-    return View(await knjige.ToListAsync());
+    // Use PaginatedList to paginate the result
+    var pageNumber = page ?? 1;
+    var pagedKnjige = await PaginatedList<Knjiga>.CreateAsync(knjige.AsQueryable().AsNoTracking(), pageNumber, pageSize);
+
+    // Return the paginated list of books to the view
+    return View(pagedKnjige);
 }
+
 
 
         // GET: Knjiga/Details/5
