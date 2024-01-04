@@ -21,11 +21,25 @@ namespace web.Controllers
         }
 
         // GET: Knjiga
-        public async Task<IActionResult> Index()
-        {
-            var schoolContext = _context.Knjige.Include(k => k.Avtor).Include(k => k.Kategorija).Include(k => k.Zvrst);
-            return View(await schoolContext.ToListAsync());
-        }
+        // GET: Knjiga
+public async Task<IActionResult> Index(string searchString)
+{
+    // Retrieve all books from the database without including related entities for now
+    var knjige = _context.Knjige.AsQueryable();
+
+    // If a search string is provided, filter the books by name
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        knjige = knjige.Where(k => k.Naslov.Contains(searchString));
+    }
+
+    // Now include the related entities after filtering
+    knjige = knjige.Include(k => k.Avtor).Include(k => k.Kategorija).Include(k => k.Zvrst);
+
+    // Return the filtered or unfiltered list of books to the view
+    return View(await knjige.ToListAsync());
+}
+
 
         // GET: Knjiga/Details/5
         public async Task<IActionResult> Details(int? id)
