@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tim Purnat\\Desktop\\aljazis\\knjiznica\\web\\web.csproj": {}
+    "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tim Purnat\\Desktop\\aljazis\\knjiznica\\web\\web.csproj": {
+    "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tim Purnat\\Desktop\\aljazis\\knjiznica\\web\\web.csproj",
+        "projectUniqueName": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\web.csproj",
         "projectName": "web",
-        "projectPath": "C:\\Users\\Tim Purnat\\Desktop\\aljazis\\knjiznica\\web\\web.csproj",
-        "packagesPath": "C:\\Users\\Tim Purnat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tim Purnat\\Desktop\\aljazis\\knjiznica\\web\\obj\\",
+        "projectPath": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\web.csproj",
+        "packagesPath": "C:\\Users\\tajns\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Tim Purnat\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tajns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
