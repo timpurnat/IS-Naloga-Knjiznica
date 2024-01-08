@@ -1,8 +1,74 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<head>
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+</head>
 <div class="text-center">
     <h1 class="display-4">Knjiznica</h1>
-    <p>Izposoja/rezervacija knjig -->  <a href="http://localhost:5044/Knjige">Katalog</a>.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Book 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/theCatcherInTheRye.jpg" class="card-img-top img-fluid" alt="Book 1">
+                <div class="card-body">
+                    <h5 class="card-title">The Catcher in the Rye</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/TheGreatGatsby.jpg" class="card-img-top img-fluid" alt="Book 2">
+                <div class="card-body">
+                    <h5 class="card-title">The Great Gatsby</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/TheHungerGames.jpg" class="card-img-top img-fluid" alt="Book 3">
+                <div class="card-body">
+                    <h5 class="card-title">The Hunger Games</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/GTA5.jpg" class="card-img-top img-fluid" alt="Game 1">
+                <div class="card-body">
+                    <h5 class="card-title">Grand Theft Auto V</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/TheDaVinciCode.jpg" class="card-img-top img-fluid" alt="Game 2">
+                <div class="card-body">
+                    <h5 class="card-title">The Da Vinci Code</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/images/TheGirl.jpg" class="card-img-top img-fluid" alt="Video 1">
+                <div class="card-body">
+                    <h5 class="card-title">The Girl with the Dragon Tattoo</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p> Poglej celoten katalog!  <a href="http://localhost:5044/Knjiga">Katalog</a>.</p>
 </div>

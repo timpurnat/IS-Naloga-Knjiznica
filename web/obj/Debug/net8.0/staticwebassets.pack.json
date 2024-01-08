@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\GTA5.jpg",
+      "PackagePath": "staticwebassets\\images\\GTA5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\TheDaVinciCode.jpg",
+      "PackagePath": "staticwebassets\\images\\TheDaVinciCode.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\TheGirl.jpg",
+      "PackagePath": "staticwebassets\\images\\TheGirl.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\TheGreatGatsby.jpg",
+      "PackagePath": "staticwebassets\\images\\TheGreatGatsby.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\TheHungerGames.jpg",
+      "PackagePath": "staticwebassets\\images\\TheHungerGames.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\images\\theCatcherInTheRye.jpg",
+      "PackagePath": "staticwebassets\\images\\theCatcherInTheRye.jpg"
+    },
+    {
       "Id": "C:\\Users\\tajns\\OneDrive\\Dokumenti\\faks\\IS-Naloga-Knjiznica\\web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
