@@ -1020,3 +1020,7 @@ C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\obj\Debug\net8.0\
 C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\obj\Debug\net8.0\web.pdb
 C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\obj\Debug\net8.0\web.genruntimeconfig.cache
 C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\obj\Debug\net8.0\ref\web.dll
+C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tajns\OneDrive\Dokumenti\faks\IS-Naloga-Knjiznica\web\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
