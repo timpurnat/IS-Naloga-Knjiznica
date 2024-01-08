@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Knjiznica"
         tools:targetApi="31">
         <activity
+            android:name=".AddKnjigaActivity"
+            android:exported="false" />
+        <activity
             android:name=".PUT"
             android:exported="false" />
         <activity

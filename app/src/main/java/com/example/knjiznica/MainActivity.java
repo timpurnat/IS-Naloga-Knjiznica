@@ -82,5 +82,13 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    public static final String EXTRA_MESSAGE = "com.example.universityapp.MESSAGE";
+
+    public void addKnjigaActivity (View view) {
+        Intent intent = new Intent(this,AddKnjigaActivity.class);
+        String message = "Dodaj knjigo.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
 }
