@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
     private TextView osebe;
-    private String url = "https://is-knjiznica.azurewebsites.net/";
+    private String url = "https://is-knjiznica.azurewebsites.net/api/v1/knjiga";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
