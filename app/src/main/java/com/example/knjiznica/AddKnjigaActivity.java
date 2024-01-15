@@ -36,7 +36,7 @@ public class AddKnjigaActivity extends AppCompatActivity {
     private EditText imageLink;
 
     private RequestQueue requestQueue;
-    private String url = "https://knjiznica.azurewebsites.net/api/v1/knjiga";
+    private String url = "https://is-knjiznica.azurewebsites.net/";
 
 
     @SuppressLint("MissingInflatedId")
