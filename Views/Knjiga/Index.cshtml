@@ -1,0 +1,138 @@
+@model PaginatedList<web.Models.Knjiga>
+@using help
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... (other head elements) ... -->
+    <script>
+          function toggleSort(sortBy) {
+        var sortByInput = document.getElementById('sortBy');
+        var sortOrderInput = document.getElementById('sortOrder');
+
+        if (sortByInput.value === sortBy) {
+            // Toggle between asc and desc when the same button is clicked
+            sortOrderInput.value = sortOrderInput.value === 'asc' ? 'desc' : 'asc';
+        } else {
+            // Set the new sortBy value and default to asc
+            sortByInput.value = sortBy;
+            sortOrderInput.value = 'asc';
+        }
+
+        // Submit the form
+        document.getElementById('sortForm').submit();
+    }
+
+    function toggleOrder() {
+        var sortOrderInput = document.getElementById('sortOrder');
+        // Toggle between asc and desc when the "Toggle Order" button is clicked
+        sortOrderInput.value = sortOrderInput.value === 'asc' ? 'desc' : 'asc';
+
+        // Set a default sortBy value (you can change this to the desired default)
+        document.getElementById('sortBy').value = 'naslov';
+
+        // Submit the form
+        document.getElementById('sortForm').submit();
+    }
+    </script>
+    
+</head>
+<body>
+    <h1>Katalog</h1>
+
+    <p>
+        @if (User.IsInRole("Administrator") || User.IsInRole("Manager"))
+        {
+            <a asp-action="Create">Dodaj Gradivo</a>
+        }
+    </p>
+    <form asp-action="Index" method="get" id="sortForm">
+        <p>
+            Search by name: <input type="text" name="searchString" />
+            <input type="submit" value="Search" />
+        </p>
+      
+        <p>
+            <strong>Sortiraj po naslovu:</strong>
+            <button type="button" onclick="toggleSort('naslov')">Ascending</button>
+            <button type="button" onclick="toggleOrder()">Descending</button>
+            <input type="hidden" name="sortOrder" id="sortOrder" value="asc" />
+            <input type="hidden" name="sortBy" id="sortBy" value="" />
+        </p>
+       
+    </form>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src=@item.ImageLink class="card-img-top book-image" alt="Book Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Naslov)</h5>
+                        <p class="card-text">
+                            <strong>Autor:</strong> @Html.DisplayFor(modelItem => item.Avtor.PriimekIme)<br />
+                            <strong>Zvrst:</strong> @Html.DisplayFor(modelItem => item.Zvrst.ImeZvrsti)<br />
+                            <strong>Kategorija:</strong> @Html.DisplayFor(modelItem => item.Kategorija.imeKategorije)<br />
+                            <strong>Ocena:</strong> @Html.DisplayFor(modelItem => item.Ocena)
+                        </p>
+                        <div class="text-center">
+                            <!-- Add the "Rezerviraj" button -->
+                            <a asp-action="Rezervacija" asp-route-id="@item.KnjigaId" class="btn btn-success">Rezerviraj</a>
+
+                            <a asp-action="Details" asp-route-id="@item.KnjigaId" class="btn btn-primary">Details</a>
+
+                            @if (User.IsInRole("Administrator") || User.IsInRole("Manager"))
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.KnjigaId" class="btn btn-secondary">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.KnjigaId" class="btn btn-danger">Delete</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="pagination">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="?page=@(Model.PageIndex - 1)">Previous</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                }
+
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                        <a class="page-link" href="?page=@i">@i</a>
+                    </li>
+                }
+
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="?page=@(Model.PageIndex + 1)">Next</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">Next</span>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

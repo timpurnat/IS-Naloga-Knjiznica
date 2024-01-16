@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem rgb(255, 255, 255), 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: #a89d92;
+}
+body {
+  background-color: #a89d92;
+  margin-bottom: 60px;
+}
+.book-image {
+  height: 550px;
+  object-fit: cover;
+}
+.card-text {
+  color: #e1d7d7;
+}
+.card {
+  border: 1px solid #503D3F;
+  border-radius: 10px;
+  height: 100%;
+}
+.card-body{
+  background-color: #503D3F;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+.card-title{
+  color: #e1d7d7;
+}

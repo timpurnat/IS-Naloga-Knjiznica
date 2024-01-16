@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/a3dc9688-a441-4958-a240-fa9bd7f8575f/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/Knjizica"
+}
