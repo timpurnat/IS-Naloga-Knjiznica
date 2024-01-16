@@ -23,4 +23,4 @@ Zasloneke slike grafičnega vmesnika:
 ![image2](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/21ecde36-c52b-4ca6-8208-bdd8427f79fe)
 
 Slika podatkovnega modela
-![image2](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/3ddb8e95-ff50-4ed1-b676-5c63eb626541)
+![diagram (3)](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/3bc7044a-bd2b-4057-ba3a-b28bd285c4e2)
