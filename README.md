@@ -16,8 +16,8 @@ Tim Purnat: Izboljšanje baze in dodajanje novih atributov, sortiranje in iskanj
 Aljaz Tajnsek: Wep Api, andorid aplikacija, avtentikacija/avtorizacija API
 
 Zasloneke slike grafičnega vmesnika:
-![image](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/9eb3ec71-ba26-4aed-9aad-3d69520a545e)
-![image](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/bc363829-ba08-4f90-8191-41fc02bf2e4f)
+![image1](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/a8e06e94-826f-4b10-8adc-834d9432e13f)
+![image2](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/13d217e4-10d6-4394-85ea-9ed54694a8df)
 ![image](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/e718f773-44e2-4434-a37c-bf3a58783401)
 ![image](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/80be5acf-fbad-41da-8d6b-762a5b49b46b)
 ![image2](https://github.com/timpurnat/IS-Naloga-Knjiznica/assets/75582748/21ecde36-c52b-4ca6-8208-bdd8427f79fe)
