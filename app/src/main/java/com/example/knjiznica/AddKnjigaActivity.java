@@ -1,5 +1,7 @@
 package com.example.knjiznica;
 
+import static com.example.knjiznica.MainActivity.EXTRA_MESSAGE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -115,5 +117,11 @@ public class AddKnjigaActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+    public void goBackToMain (View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        String message = "Go Back.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
